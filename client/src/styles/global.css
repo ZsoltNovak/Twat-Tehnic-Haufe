@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer common {
+  .content-width {
+    @apply max-w-screen-2xl mx-auto px-4 sm:px-6;
+  }
+}
