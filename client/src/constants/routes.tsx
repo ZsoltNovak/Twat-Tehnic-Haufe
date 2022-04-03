@@ -1,4 +1,4 @@
-import { Home, RegisterPage } from "pages/_pages";
+import { Home, Register, Login } from "pages/_pages";
 
 export const ROUTES = [
   {
@@ -8,7 +8,12 @@ export const ROUTES = [
   },
   {
     path: "/register",
-    element: <RegisterPage />,
+    element: <Register />,
     key: "register",
+  },
+  {
+    path: "/login",
+    element: <Login />,
+    key: "login",
   },
 ];
