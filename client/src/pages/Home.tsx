@@ -32,7 +32,11 @@ const Home = () => {
             />
           </div>
           <div className="px-10 text-center">
-            <Button children="Login" buttonColor={"808080"} />
+            <Button
+              children="Login"
+              buttonColor={"808080"}
+              clickFunction={() => navigate("/login")}
+            />
           </div>
         </div>
       </div>
