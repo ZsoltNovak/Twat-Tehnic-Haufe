@@ -39,6 +39,11 @@ const Home = () => {
             />
           </div>
         </div>
+        <Button
+          children="Try APIs"
+          buttonColor={"808080"}
+          clickFunction={() => navigate("/features")}
+        />
       </div>
     </div>
   );
