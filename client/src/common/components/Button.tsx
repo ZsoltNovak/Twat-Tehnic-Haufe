@@ -17,7 +17,7 @@ const Button: React.FC<IButton> = ({
     <button
       className={
         `font-normal py-4 px-10 border-solid border rounded-lg cursor-pointer uppercase bg-[#${buttonColor}] hover:bg-black transition ease-in-out text-white` +
-        (disabled ? " disabled" : "")
+        (disabled ? "disabled:opacity-75" : "")
       }
       onClick={clickFunction}
       disabled={disabled}

@@ -1,5 +1,4 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 import Button from "common/components/Button";
 import useAxios from "common/hooks/useAxios";
@@ -7,7 +6,8 @@ import useAxios from "common/hooks/useAxios";
 const dataImage: string = require("assets/pngs/dataImage.png");
 
 const Features = () => {
-  const { fetchData } = useAxios();
+  const [dataIsAdded, setDataIsAdded] = useState(true);
+  const { generateData, aggregateData } = useAxios();
 
   return (
     <div className="content-width">
@@ -19,7 +19,16 @@ const Features = () => {
           <Button
             children="Add Data"
             buttonColor={"808080"}
-            clickFunction={fetchData}
+            clickFunction={() => {
+              generateData();
+              setDataIsAdded(!dataIsAdded);
+            }}
+          />
+          <Button
+            children="Aggregate"
+            buttonColor={"808080"}
+            clickFunction={() => aggregateData}
+            disabled={dataIsAdded}
           />
         </div>
         <img src={dataImage} alt="Welcome" />
