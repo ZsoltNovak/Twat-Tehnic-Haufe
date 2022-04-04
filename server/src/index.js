@@ -37,14 +37,15 @@ const init = async () => {
     path: "/zipcodes",
     handler: async (req, h) => {
       const offset = Number(req.query.offset) || 0;
-      const movies = await req.mongo.db
+      const zipcodes = await req.mongo.db
         .collection("zipcodes")
         .find({})
         .sort({ pop: -1 })
         .skip(offset)
         .limit(20)
         .toArray();
-      return movies;
+      console.log(zipcodes);
+      return zipcodes;
     },
   });
 
@@ -61,7 +62,7 @@ const init = async () => {
     },
   });
 
-  // Executing aggregation based on population
+  // Executing aggregation based on average city population by state
   server.route({
     method: "GET",
     path: "/population",
