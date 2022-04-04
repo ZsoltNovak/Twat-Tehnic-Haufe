@@ -1,4 +1,4 @@
-import { Home, Register, Login } from "pages/_pages";
+import { Home, Register, Login, Features } from "pages/_pages";
 
 export const ROUTES = [
   {
@@ -15,5 +15,10 @@ export const ROUTES = [
     path: "/login",
     element: <Login />,
     key: "login",
+  },
+  {
+    path: "/features",
+    element: <Features />,
+    key: "features",
   },
 ];
