@@ -10,6 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "@hapi/hapi": "^20.2.1",
+    "hapi-mongodb": "^10.0.3",
+    "joi": "^17.6.0",
     "mongoose": "^6.2.9"
   }
 }
